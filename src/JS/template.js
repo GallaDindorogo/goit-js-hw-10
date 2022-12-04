@@ -21,18 +21,34 @@ export function renderCountryCard({
 }) {
   return `
     <div class="country">
-      <img class = "capital-flag" src="${flags.svg}" alt="${
-    name.official
-  }" width = 200/>
-      <h2 class = "country-title">Country: ${name.official}</h2>
-      <p class = "country-text">Capital: ${capital}</p>
-      <p class="country-text">Population: ${population.toLocaleString()} person</p>
-      <p class="country-text">Area: ${area.toLocaleString()} sq.km</p>
-      <p class="country-text">Population Density: ${Math.round(
-        population / area
-      )} p/sq.km</p>
-
-      <p class="country-text">Languages: ${Object.values(languages)}</p>
-    </div>
+  <img
+    class="capital-flag"
+    src="${flags.svg}"
+    alt="${name.official}"
+    width="200"
+  />
+  <h2 class="country-title">Country: ${name.official}</h2>
+  <div class="country-table">
+    <p class="country-table-text">Capital:</p>
+    <p class="country-table-value">${capital}</p>
+  </div>
+  <div class="country-table">
+    <p class="country-table-text">Population:</p>
+    <p class="country-table-value">${population.toLocaleString()} person</p>
+  </div>
+  <div class="country-table">
+    <p class="country-table-text">Area:</p>
+    <p class="country-table-value">${area.toLocaleString()} sq.km</p>
+  </div>
+  <div class="country-table">
+    <p class="country-table-text">Population Density:</p>
+    <p class="country-table-value">${Math.round(population / area)} p/sq.km</p>
+  </div>
+<div class="country-table">
+  <p class="country-table-text">Languages:</p>
+  <p class="country-table-value">${Object.values(languages)}</p>
+</div>
+  
+</div>
     `;
 }
