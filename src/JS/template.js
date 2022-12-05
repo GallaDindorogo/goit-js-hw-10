@@ -1,6 +1,6 @@
 export function renderCountryList({ flags, name }) {
   return `
-    <li class = country-item>
+    <li class = country-list>
     <img class = 'country-list__flags'
     src="${flags.svg}" 
     alt="${name.official}"
